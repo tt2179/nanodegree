@@ -1,0 +1,8 @@
+section.social-media img {
+    width: 30px;
+    height: 30px;
+}
+
+section.social-media a {
+    text-decoration: none;
+}

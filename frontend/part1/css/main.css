@@ -1,0 +1,94 @@
+@import 'shared/common.css';
+@import 'shared/layout.css';
+@import 'shared/social-media.css';
+
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+}
+
+input[name="name"], input[name="email"] {
+    width: 50px;
+}
+
+button.read {
+    background-color: #333;
+    border: 1px solid #333;
+}
+
+button.coming-soon {
+    background-color: #ccc;
+    border: 1px solid #ccc;
+}
+
+figure {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+figcaption {
+    background-color: rgba(187, 210, 239, 0.455);
+    padding: 5px;
+    margin-top: -5px;
+    font-style: italic;
+    color: #666666;
+}
+
+section.card {
+    border: 1px solid #999999;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+section.card > figure > img {
+    object-fit: cover;
+    width: 100%;
+    height: 50vh;
+}
+
+section.archive {
+    border: 0;
+}
+
+@media (min-width: 600px) {
+
+    aside {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+}
+
+@media (min-width: 900px) {
+
+    .container {
+        display: grid;
+        grid-template-columns: 2fr 2fr 1fr;
+        grid-template-rows: auto 30px auto 50px;
+        gap: 10px;
+        grid-template-areas: 
+            "head head head"
+            "nav nav nav"
+            "main main aside"
+            "foot foot foot";
+    }
+
+    input[name="name"], input[name="email"] {
+        width: auto;
+    }
+
+    main {
+        grid-area: main;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    aside {
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+}

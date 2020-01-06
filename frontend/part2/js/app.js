@@ -60,7 +60,11 @@ function setActiveSection(section) {
 }
 
 function scrollToTop() {
-    window.scrollTo(0, 0);
+    window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: 'smooth'
+    });
     setActiveSection(sections[0]);
 }
 
@@ -127,7 +131,11 @@ function addNavbarClickHandler() {
             let section = document.getElementById(anchor.attributes["data-section"].value);
 
             setActiveSection(section);
-            window.scrollTo(0, section.offsetTop); // scroll to top of section
+            window.scrollTo({
+                top: section.offsetTop,
+                left: 0,
+                behavior: 'smooth'
+            }); // scroll to top of section
         }
     });
 }

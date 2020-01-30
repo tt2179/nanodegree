@@ -1,2 +1,5 @@
 *.DS_Store
 frontend/resources
+node_modules
+.npmrc
+.eslint*

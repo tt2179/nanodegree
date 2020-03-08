@@ -1,3 +1,28 @@
+# Post Development Instructions
+Test the Production and Development configurations as follows:
+
+## Production
+From the console run:
+- `npm start`
+- Client application and server deploy to http://localhost:8081
+- Open Browser and navigate to http://localhost:8081
+
+## Development
+From the console run:
+- `npm run server`
+- Server / API deploys to http://localhost:8081
+
+From another console run:
+- `npm run build-dev`
+- Client application deploys to http://localhost:8080
+- Brower should automatically open to http://localhost:8080
+
+## Test
+From the console run:
+- `npm test`
+
+***
+
 # Project Instructions
 
 This repo is your starter code for the project. It is the same as the starter code we began with in lesson 2. Install and configure Webpack just as we did in the course. Feel free to refer to the course repo as you build this one, and remember to make frequent commits and to create and merge branches as necessary!

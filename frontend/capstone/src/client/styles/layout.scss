@@ -1,0 +1,63 @@
+// Layout
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto 90vh auto;
+    gap: 0px;
+    grid-template-areas:
+        "head"
+        "nav"
+        "aside"
+        "main"
+        "foot"
+}
+
+header {
+    grid-area: head;
+    text-align: left;
+}
+
+nav {
+    grid-area: nav;
+    font-size: small;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 5px;
+}
+
+aside {
+    grid-area: aside;
+    background-color: #d3d3d3;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 10px;
+
+    #travelWeather {
+        border: 0px solid #cccccc;
+        border-radius: 10px;
+        background-color: white;
+        padding: 10px;
+        color: #666;
+    }
+}
+
+main {
+    grid-area: main;
+    background-color: rgb(102, 4, 158);
+}
+
+footer {
+    grid-area: foot;
+    font-size: small;
+    font-weight: bold;
+    background-color: #333333;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}

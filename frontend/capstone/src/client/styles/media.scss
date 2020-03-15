@@ -1,0 +1,49 @@
+
+
+@media (min-width: 900px) {
+    .banner {
+        font-size: 7em;
+        height: 200px;
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto auto auto auto;
+        //gap: 10px;
+        grid-template-areas:
+            "head head head"
+            "nav nav nav"
+            "main main aside"
+            "foot foot foot";
+    }
+
+    #travelImage {
+        box-shadow: none;
+    }
+
+    button {
+        width: auto;
+        margin-top: auto;
+    }
+
+    nav {
+        flex-direction: row;
+        font-size: unset;
+    }
+
+    main {
+        grid-area: main;
+        display: grid;
+        gap: 0px;
+    }
+
+    aside {
+        grid-area: aside;
+        flex-direction: column;
+        justify-content: flex-start;
+        box-shadow: -5px 10px 10px #333;
+        z-index: 100;
+    }
+
+}

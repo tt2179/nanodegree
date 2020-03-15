@@ -1,0 +1,102 @@
+/* Google Fonts https://fonts.google.com/ */
+@import url('https://fonts.googleapis.com/css?family=Anonymous+Pro|Bangers|Bellota&display=swap');
+
+/* Open Iconic font icon CDN */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic.css');
+
+* {
+    margin: 0px;
+}
+
+body {
+    font-family: 'Anonymous Pro';
+}
+
+.banner {
+    font-family: 'Bangers', cursive;
+    font-size: 4em;
+    font-weight: bold;
+    color:white;
+    width:100%;
+    height: 100px;
+    background: rgb(139,60,54);
+    background: linear-gradient(90deg, rgba(139,60,54,1) 0%, rgba(164,102,22,1) 40%, rgba(56,1,142,1) 100%);
+}
+
+form {
+    width: 100%;
+    div, button {
+        display: inline;
+    }
+}
+
+button {
+    background-color: #df9007;
+    border: 1px solid #df9007;
+    border-radius: 3px;
+    height: 20px;
+    color: white;
+    cursor: pointer;
+    display: block;
+    margin-top:5px;
+    width: 100%;
+}
+button:hover {
+    background-color: #680ee6;
+    border: 1px solid #680ee6;
+}
+
+nav {
+    input, label, button {
+        margin-right: 5px;
+    }
+
+    input {
+        border: 1px solid #ccc;
+        padding: 2px;
+    }
+    input:hover {
+        background-color: #faead3;
+        border-color: #df9007;
+    }
+}
+
+#travelImage {
+    width: 100%;
+    height: 70vh;
+    object-fit: cover;
+    box-shadow: 10px 10px 5px #24033f;
+
+    &.load-pic {
+        animation-name: load-pic;
+        animation-duration: 4s;
+    }
+    &.unload-pic {
+        animation-name: unload-pic;
+        animation-duration: 8s;
+    }
+}
+@keyframes load-pic {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+@keyframes unload-pic {
+    from {opacity: 1;}
+    to {opacity: 0;}
+}
+
+#travelCountdown {
+    font-family: 'Bangers', cursive;
+    font-size: 1.5em;
+    text-align: center;
+    padding-bottom: 10px;
+    color:#999;
+}
+
+input[id="travelPlace"], input[id="travelDate"] {
+    width: 75px;
+}
+
+@import 'layout.scss';
+
+@import 'media.scss';

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Capstone - Travel Planner</title>
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <div class="banner">Travel Planner</div>
+            </header>
+            <nav>
+                <form id="travelForm">
+                    <div>
+                        <label for="travelPlace">Destination: </label>
+                        <input id="travelPlace" placeholder="Enter Destination">
+                        <label for="travelDate">Departure: </label>
+                        <input id="travelDate" pattern="MM/DD/YYYY" placeholder="MM/DD/YYYY">
+                    </div>
+                    <button id="travelSubmit" type="submit">Go!</button>
+                </form>
+            </nav>
+            <aside>
+                <section id="travelCountdown"></section>
+                <section id="travelWeather">
+                    <ul>
+                        <li>Enter a destination to get started!</li>
+                    </ul>
+                </section>
+            </aside>
+            <main>
+                <!-- Default image sourced via: https://www.freeimages.com/photo/globe-1238288 -->
+                <img id="travelImage" alt="Destination Image" src="./src/client/media/globe-1920x1280.jpg">
+            </main>
+            <footer>
+                Copyright &copy; 2020
+            </footer>
+        </div>
+        <script>
+            // Check that service workers are supported
+            if ('serviceWorker' in navigator) {
+                // Use the window load event to keep the page load performant
+                window.addEventListener('load', () => {
+                    navigator.serviceWorker.register('/service-worker.js');
+                });
+            }
+        </script>
+    </body>
+</html>
